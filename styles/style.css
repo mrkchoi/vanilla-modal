@@ -17,8 +17,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 5px 20px rgba(0,0,0,.2)
+    transform-origin: center;
+    transform: translate(-50%, -50%) scale(.7);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    z-index: 1000;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-out;
 }
 
 .btn__modal {
@@ -44,7 +50,9 @@ body {
 .modal__background {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(200,200,200,.4)
+    background-color: rgba(200,200,200,.4);
+    opacity: 0;
+    visibility: hidden;
 }
 
 
